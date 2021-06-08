@@ -296,6 +296,7 @@ describe('Redux Test Case Reducer', () => {
           actionsFileName: 'Hello',
           filePath: 'World',
           id: 3,
+          type: 'UPDATE_ACTIONS_FILEPATH',
         },
       };
 
@@ -309,7 +310,7 @@ describe('Redux Test Case Reducer', () => {
               filePath: '',
               typesFileName: '',
               typesFilePath: '',
-              type: 'action-creator',
+              type: 'UPDATE_ACTIONS_FILEPATH',
               actionCreatorFunc: '',
               actionType: '',
               payloadKey: null,
@@ -670,6 +671,7 @@ describe('Redux Test Case Reducer', () => {
         typesFileName: 'Hello',
         typesFilePath: 'World',
         id: 3,
+        type: 'UPDATE_TYPES_FILEPATH',
       },
     };
 
@@ -683,7 +685,7 @@ describe('Redux Test Case Reducer', () => {
             filePath: '',
             typesFileName: '',
             typesFilePath: '',
-            type: 'action-creator',
+            type: 'UPDATE_TYPES_FILEPATH',
             actionCreatorFunc: '',
             actionType: '',
             payloadKey: null,

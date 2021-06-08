@@ -188,6 +188,10 @@ export const reduxTestCaseReducer = (state = reduxTestCaseState, action: any) =>
           statement.responseType = action.payload.responseType;
           statement.it = action.payload.it;
           statement.expectedArg = action.payload.expectedArg;
+          statement.requestBody = action.payload.requestBody;
+          statement.store = action.payload.store;
+          statement.matcher = action.payload.matcher;
+          statement.expectedResponse = action.payload.expectedResponse;
         }
         return statement;
       });
@@ -222,6 +226,7 @@ export const reduxTestCaseReducer = (state = reduxTestCaseState, action: any) =>
           statement.reducerName = action.payload.reducerName;
           statement.expectedKey = action.payload.expectedKey;
           statement.expectedValue = action.payload.expectedValue;
+          statement.expectedState = action.payload.expectedState;
         }
         return statement;
       });
@@ -231,11 +236,9 @@ export const reduxTestCaseReducer = (state = reduxTestCaseState, action: any) =>
       };
     case actionTypes.UPDATE_ACTIONS_FILEPATH:
       reduxStatements = reduxStatements.map((statement) => {
-        // if (statement.id === action.payload.id) {
         if (action.payload.type === statement.type) {
           statement.actionsFileName = action.payload.actionsFileName;
           statement.filePath = action.payload.filePath;
-          // }
         }
         return statement;
       });

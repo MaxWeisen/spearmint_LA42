@@ -270,6 +270,10 @@ interface Async {
   payloadKey?: null | string;
   payloadType?: null | string;
   expectedArg?: string;
+  requestBody?: string;
+  store?: string;
+  matcher?: string;
+  expectedResponse?: string;
 }
 
 interface Reducer {
@@ -287,6 +291,7 @@ interface Reducer {
   reducerName?: string;
   expectedValue?: string;
   expectedKey?: string;
+  expectedState?: string;
 }
 
 // type interface shape for all redux test statments
